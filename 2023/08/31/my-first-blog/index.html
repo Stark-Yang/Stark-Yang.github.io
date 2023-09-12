@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/08/31/my-first-blog/"/>
+  <link rel="canonical" href="http://iris.distars.top/2023/08/31/my-first-blog/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -27,6 +27,7 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
+    <link rel="shortcut icon" type='image/x-icon' href="https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/favicon16.ico">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -39,7 +40,7 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="my-first-blog">
-<meta property="og:url" content="http://example.com/2023/08/31/my-first-blog/index.html">
+<meta property="og:url" content="http://iris.distars.top/2023/08/31/my-first-blog/index.html">
 <meta property="og:site_name" content="Iris">
 <meta property="og:description" content="A personal site">
 <meta property="og:locale" content="zh_CN">
@@ -1689,6 +1690,27 @@ ul.list-v >li>a:hover {
       if(userColorScheme){
         document.documentElement.setAttribute("color-scheme", userColorScheme);
       }
+      document.addEventListener("error", function(e) {
+        const elem = e.target;
+        const parentElem = e.target.parentElement;
+        const parentElemClass = parentElem.classList.toString();
+        const pParentElemClass = parentElem.parentElement.classList.toString();
+        if (elem.tagName.toLowerCase() !== 'img') {
+          return;
+        }
+        elem.classList.add('fix-cursor-default', 'error');
+        if(parentElemClass === 'fancybox' && pParentElemClass === 'fancybox') {
+          parentElem.parentElement.classList.add('hideFancybox');
+          parentElem.parentElement.classList.remove('fancybox');
+          parentElem.classList.remove('fancybox');
+        } else if(parentElemClass === 'img-bg' && pParentElemClass === 'img-wrap') {
+          parentElem.parentElement.classList.add('hideFancybox');
+        } else if(parentElemClass === 'author') {
+          parentElem.parentElement.classList.add('fix-author-imgError');
+        } else if(parentElemClass.indexOf('tk-avatar') != -1 ) {
+          parentElem.parentElement.classList.add('fix-avatar-imgError');
+        }
+      }, true);
     </script>
   
 <script>
@@ -2101,7 +2123,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1694512500613),
+    lastupdate: new Date(1694537565247),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2459,7 +2481,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='top'>
     
     
-      <p class="title">南烛子</p>
+      <p class="title"><font><span>南</span> <span>烛</span> <span>子<span></font></p>
     
     
       <p class="subtitle">一 株 南 烛 独 如 丹</p>
@@ -2536,7 +2558,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/31/my-first-blog/">
+  <link itemprop="mainEntityOfPage" href="http://iris.distars.top/2023/08/31/my-first-blog/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Iris">
   </span>
@@ -2675,7 +2697,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/08/31/my-first-blog/&title=my-first-blog - Iris&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://iris.distars.top/2023/08/31/my-first-blog/&title=my-first-blog - Iris&summary="
           
           >
           
@@ -2687,7 +2709,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/08/31/my-first-blog/&title=my-first-blog - Iris&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://iris.distars.top/2023/08/31/my-first-blog/&title=my-first-blog - Iris&summary="
           
           >
           
@@ -2699,7 +2721,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/08/31/my-first-blog/&title=my-first-blog - Iris&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://iris.distars.top/2023/08/31/my-first-blog/&title=my-first-blog - Iris&summary="
           
           >
           
@@ -2708,14 +2730,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
     
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120023001.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120023001.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+ElEQVR42u3aS1LEMAwFwNz/0rAHpqJfhijT3kFlEqu9UT35+LL+XAcCMGDAgAEDZg3MUVy/Xvjj/9Hfnf0++vxUPWDAgAEDBgyYfTDhBij4fBc6CzFVDxgwYMCAAQNmL8xpA1Rs5KYKqDaK4XrAgAEDBgwYMB8HEy1kqtGbOjgwYMCAAQMGDJjue7JwU4M/MGDAgAEDBsxzYNIDqmBANXUxqXqh6O2TSDBgwIABAwbM22CqG7/r3+V6wIABAwYMGDBrYLqrG0RVg6ZsIxeuBwwYMGDAgAGzBqbaIHULmhqsTe0fDBgwYMCAAbMXJvqhqUFXFDb7vSokGDBgwIABA2YfTPUCUBQ2G3BVAbMDwZd1ggEDBgwYMGDWwnQ/WB3EXT3ACwduYMCAAQMGDJh1MFcFSNVAaeoAsgEcGDBgwIABA2YfTDWAqgZT3eArXXD0+2DAgAEDBgyYNTBTAc/UhZ+pC0Pl94ABAwYMGDBg1sFMBVDdgqrfrw7ywIABAwYMGDD7YaYasWywdQRXtcFLHzgYMGDAgAEDZh1MdSPThUV/N3ZRCAwYMGDAgAHzOJjyi5ONVbZh7AZk5QQPDBgwYMCAAXM7mHcNxLpBVXcf4YMAAwYMGDBgwDwGpjpIu+pCUbrQ7AAQDBgwYMCAAbMGplvw2IWdiy4QpRtCMGDAgAEDBsw6mOnAJ7qh7nsuC6rAgAEDBgwYMOtgpi70TDWO1QMpX3wCAwYMGDBgwKyFib5oak0dyFjQBQYMGDBgwIBZAzMVDFULzTZo0wPBlw0eGDBgwIABA+b2MN1GaTpoqjaUUdD0wA0MGDBgwIABc3uYqcarCvDfgzcwYMCAAQMGzH6YagOVHahlg69uAxjdDxgwYMCAAQPm82CyhVUbwHbh2YEbGDBgwIABA+bxMNnAKxosdYOy9PfBgAEDBgwYMGthpjZ+VkC00G7jmB7QgQEDBgwYMGDWwXQHV1WgbAFTz4UvDoEBAwYMGDBgbgtjgQEDBgwYMGCWrW8gYuUO3zRJGAAAAABJRU5ErkJggg==">
-          </div>
-        </div>
       
     
       
@@ -2857,7 +2871,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <div class='copyright'>
-        <p><a target="_blank" rel="noopener" href="http://iris.distars.top/">Copyright © since 2023 IRIS</a></p>
+        <p><a href="http://iris.distars.top/">Copyright © since 2023 IRIS</a></p>
 
         </div>
       
@@ -3252,7 +3266,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/034.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3576,7 +3590,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Iris","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"A personal site"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Iris"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/08/31/my-first-blog/","name":"my-first-blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Iris","url":"http://example.com/","keywords":null,"description":"A personal site","author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://example.com/","description":"A personal site"},"publisher":{"@type":"Organization","name":"Iris","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"my-first-blog","description":"A personal site","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/08/31/my-first-blog/"},"author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Iris","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"url":"http://example.com/2023/08/31/my-first-blog/","wordCount":0,"datePublished":"2023-08-31T08:37:27.000Z","dateModified":"2023-08-31T08:37:27.570Z","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","sameAs":["https://github.com/volantis-x"],"description":"A personal site"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://iris.distars.top/","name":"Iris"}},{"@type":"ListItem","position":3,"item":{"@id":"http://iris.distars.top/2023/08/31/my-first-blog/","name":"my-first-blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Iris","url":"http://iris.distars.top/","keywords":null,"description":"A personal site","author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","description":"A personal site"},"publisher":{"@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://iris.distars.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"my-first-blog","description":"A personal site","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://iris.distars.top/2023/08/31/my-first-blog/"},"author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/"},"publisher":{"@type":"Organization","name":"Iris","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"url":"http://iris.distars.top/2023/08/31/my-first-blog/","wordCount":0,"datePublished":"2023-08-31T08:37:27.000Z","dateModified":"2023-08-31T08:37:27.570Z","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}}]</script>
 
 
 
