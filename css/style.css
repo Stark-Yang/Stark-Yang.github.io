@@ -7194,7 +7194,7 @@ pre {
 }
 /* 此处调节字体大小 */
 .top .title font {
-  font-size: 2em;
+  font-size: 1em;
 }
 .top .title span {
   transition: 0.5s;
@@ -7215,7 +7215,7 @@ pre {
 }
 .top .title:hover span {
   color: #482522;
-  text-shadow: 0 0 0 10px #5c2223, 0 0 0 20px #5c2223, 0 0 0 40px #5c2223, 0 0 0 80px #5c2223, 0 0 0 120px #5c2223, 0 0 0 160px #5c2223;
+  text-shadow: 0 0 0 10px #fff, 0 0 0 20px #fff, 0 0 0 40px #fff, 0 0 0 80px #fff, 0 0 0 120px #fff, 0 0 0 160px #fff;
 }
 .md {
   text-align: left;
