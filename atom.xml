@@ -6,7 +6,7 @@
   <link href="http://iris.distars.top/atom.xml" rel="self"/>
   
   <link href="http://iris.distars.top/"/>
-  <updated>2023-08-31T06:55:13.388Z</updated>
+  <updated>2023-09-14T09:10:39.431Z</updated>
   <id>http://iris.distars.top/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一章•初识</title>
+    <link href="http://iris.distars.top/2023/08/31/my-first-blog/"/>
+    <id>http://iris.distars.top/2023/08/31/my-first-blog/</id>
+    <published>2023-08-31T08:37:27.000Z</published>
+    <updated>2023-09-14T09:10:39.431Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>概述：</p><ul><li>C 的历史和特性</li><li>编写程序的步骤</li><li>编译器和连接器</li><li>C 标准</li></ul></blockquote><h1 id="11-起源"><a class="markdownIt-Anchor" href="#11-起源"></a> 1.1 起源</h1><p>1972 年，贝尔实验室的丹尼斯•里奇（<em>Dennis Ritch</em>）和肯•汤普逊（<em>Ken Thompson</em>）在开发 UNIX 操作系统时，在 B 语言的基础上设计了 C 语言。其作为程序员使用的一种编程工具的设计目的是成为<strong>有用的语言</strong>。</p><h1 id="12-特点"><a class="markdownIt-Anchor" href="#12-特点"></a> 1.2 特点</h1><p>C 语言融合了计算机科学理论和实践的控制特性，它的设计理念让用户能轻松完成<u>自上而下的规划、结构化编程和模块化设计</u>。因此用 C 语言编写的程序更易懂、更可靠。</p><div class="story post-story"><h2 id="121-高效性"><a class="markdownIt-Anchor" href="#121-高效性"></a> 1.2.1 高效性</h2><p><strong>C 是高效的语音</strong>。C 程序相对更加紧凑，而且运行速度很快。实际上，C 语言具有通常是汇编语言才具有的微调控制能力，可以根据具体情况微调程序以获得最大运行速度或最有效地使用内存。</p></div><div class="story post-story"><h2 id="122-可移植性"><a class="markdownIt-Anchor" href="#122-可移植性"></a> 1.2.2 可移植性</h2><p><strong>C 是可移植的语言</strong>。因为许多计算机体系结构都可以使用 C 编译器，在一种系统中编写的 C 程序略作修改甚至不修改就可以在其他系统运行。</p></div><div class="story post-story"><h2 id="123-强大而灵活"><a class="markdownIt-Anchor" href="#123-强大而灵活"></a> 1.2.3 强大而灵活</h2><p><strong>C 语言功能强大且灵活</strong>。许多操作系统，如 UNIX；其他语言的编译器和解释器，如 python、BASIC、Perl 等都是由 C 语言编写的。另外 C 程序可以用于解决物理学和工程学的问题，甚至可用于电影特效的制作。</p></div><div class="story post-story"><h2 id="124-面向程序员"><a class="markdownIt-Anchor" href="#124-面向程序员"></a> 1.2.4 面向程序员</h2><p>C 语言是为了满足程序员的需求而设计的，程序员利用 C 可以访问硬件、操控内存中的位。C 语言能让程序员简洁地表达自己的意图，但由于其灵活性也可能让使用者犯一些莫名其妙的错误。<strong>C 语言在提供更多自由的同时，也让使用者承担了更大的责任。</strong></p></div><div class="story post-story"><h2 id="125-缺点"><a class="markdownIt-Anchor" href="#125-缺点"></a> 1.2.5 缺点</h2><p>如前所述，享受更多的自由就必须承担更大的责任。C 语言紧凑简洁，结合了大量的运算符，因而我们可以编写出让人及其费解的代码。特别是 C 语言使用指针，而涉及指针的编程错误往往难以察觉。</p><h1 id="13-c-语言的应用范围"><a class="markdownIt-Anchor" href="#13-c-语言的应用范围"></a> 1.3 C 语言的应用范围</h1><p>早在 20 世纪 80 年代，C 语言就已经成为小型计算机（UINX 系统）使用的主流语言。从此 C 语言的应用范围愈发广阔，许多软件公司都用 C 语言来开发文字处理程序、电子表格、编译器和其他产品，因为 C 语言编写的程序紧凑而高效，更重要的是 C 程序方便修改，而且移植到新系统也非常方便。<br />即便是现在，C 语言也是最重要的编程语言之一，对程序员来说掌握 C 语言也是一项重要的技能。</p><h1 id="14-计算机的工作原理"><a class="markdownIt-Anchor" href="#14-计算机的工作原理"></a> 1.4 计算机的工作原理</h1><p>计算机的组成：①<strong>中央处理器</strong>（CPU）承担绝大部分运算工作； ②<strong>随机存储器</strong> （RAM）是存储程序和文件的工作区；③<strong>永久内存存储设备</strong>，即使在关闭计算机之后，也不会丢失之前存储的程序和文件。还有各种外围设备 ，如键盘、鼠标等。CPU 作为负责程序运行的计算机核心部件，接下来将重点讨论它的工作原理。<br />CPU的工作是从内存中获得一条指令并执行，随后再从内存中获取下一条指令并执行，以此循环往复。CPU由若干个工作区——<strong>寄存器</strong>组成，寄存器中存储着下一条指令的内存地址，CPU使用该地址来获取和更新下一条指令。<u>CPU能理解的指令有限，这些指令的集合就叫作<strong>指令集</strong></u></p><blockquote><p>所有内容在计算机中都是以数字的形式储存；计算机程序最终必须以数字指令码，即<strong>机器语言</strong>，来表示。</p></blockquote><p><font color="red">简言之，计算机的工作原理是：使用特殊的指令列表（程序），来指导计算机要处理的工作以及怎样处理，然后计算机便会按设定的程序运行</font><br />最初，程序都是由计算机能直接理解的语言——<strong>机器语言</strong>设计的，这是一项十分繁琐、乏味、费力的工作，但现在机器语言编程的时代已经一去不复返了，高级编程语言应运而生。</p><h1 id="15高级计算机语言和编译器"><a class="markdownIt-Anchor" href="#15高级计算机语言和编译器"></a> 1.5高级计算机语言和编译器</h1><p>高级编程语言（如 C）大胆简化了编程工作，让人可以以更贴近自然语言而非数字码的方式来编写指令。而且使用高级编程语言，可以在更抽象的层面表达自己的想法，无须考虑CPU在处理任务时需要执行哪些步骤。例如两数相加可以写成：<br />　　　　　　　　　　　　　　 <code>total = mine + yours</code><br />虽然对我们而言，这样的程序是一目了然的，但对计算机来说却是无法理解的乱码，此时就需要<strong>编译器</strong>。<u>编译器是把高级语言程序翻译为计算机能理解的计算机语言指令集的程序</u><br />一般而言，不同CPU制造商使用的指令系统和编码格式都不同，例如使用Intel酷睿CPU编写的机器语言程序放在AMD的锐龙CPU上运行就是鸡同鸭讲。但是只要使用合适的<strong>编译器</strong>或编译器集就可以将一种高级语言程序翻译成能被不同类型的CPU所能使用的机器语言程序。<br /><font color="red">简言之，高级语言以更抽象的方式来描述程序员期望的行为，不受限于特定的CPU或指令集。而且相较于机器语言，高级语言更简单易学，也更易于使用。</font></p><h1 id="16语言标准"><a class="markdownIt-Anchor" href="#16语言标准"></a> 1.6语言标准</h1><p>目前，有许多C实现可用。如果要想在实践中做到：在不同实现中运行未使用特定编程技术的C程序时，运行情况都相同。那么不同的实现就要遵循<u>同一个标准</u><br />在C语言发展之初，并没有所谓的“C标准”。1978年，<em>布莱恩•柯林汉</em>（<em>Brain Kernighan</em>）和<em>丹尼斯•里奇</em>（<em>Dennis Ritchie</em>）合著的《C语言程序设计》（<em>The C Programming Language</em>）第一版是公认的C标准，通常称之为<em><strong>K＆R</strong></em> <strong>C</strong>或<strong>经典C</strong>。特别是该书附录中的“C语言参考手册”已经成为实现C的指导标准。虽然这本书的附录定义了C语言，但却没有定义<strong>库</strong>。与大多数语言不同的是，C语言更依赖库，但由于缺乏官方标准，<u>UNIX实现提供的库已经成为了标准库</u>。</p></div><div class="story post-story"><h2 id="161-第一个ansiiso-c标准"><a class="markdownIt-Anchor" href="#161-第一个ansiiso-c标准"></a> 1.6.1 第一个ANSI/ISO C标准</h2><p>随着C的不断发展和广泛使用，它的使用者们意识到需要一个更全面、更新颖、更严格的标准。1983年，美国国家标准协会（ANSI）为了开发一套C的新标准而组建了一个委员会（X3J11），新标准（ANSI C）于1989年正式公布，国际标准化组织于1990年采用了这套标准（IOS C）。ANSI C和ISO C是完全相同的标准。ANSI/ISO C标准的最终版本通常被称为<em>C89</em>或<em>C90</em>。<br />在该委员会制定的指导原则中，有一项是：保持C的精神。该原则具体表述为：</p><ul><li>信任程序员</li><li>不要妨碍程序员做需要做的事</li><li>保持语言精炼简单</li><li>只提供一种方法执行一种操作</li><li>让程序运行更快，即使不能保证其可移植性<br />其中最后一点，标准委员会的用意是：作为实现，应该针对目标计算机来定义最合适的某特定操作，而不是强加一个抽象、统一的定义。</li></ul></div><div class="story post-story"><h2 id="162-c99标准"><a class="markdownIt-Anchor" href="#162-c99标准"></a> 1.6.2 C99标准</h2><p>1994年</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;概述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C 的历史和特性&lt;/li&gt;
+&lt;li&gt;编写程序的步骤&lt;/li&gt;
+&lt;li&gt;编译器和连接器&lt;/li&gt;
+&lt;li&gt;C 标准&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;11-起源&quot;&gt;&lt;a class=&quot;</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="http://iris.distars.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="《C Primer Plus》" scheme="http://iris.distars.top/tags/%E3%80%8AC-Primer-Plus%E3%80%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
