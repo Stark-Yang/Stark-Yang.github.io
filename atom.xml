@@ -6,7 +6,7 @@
   <link href="http://iris.distars.top/atom.xml" rel="self"/>
   
   <link href="http://iris.distars.top/"/>
-  <updated>2023-08-31T06:55:13.000Z</updated>
+  <updated>2024-07-05T02:33:03.855Z</updated>
   <id>http://iris.distars.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis docker更新后无法启动</title>
+    <link href="http://iris.distars.top/2024/07/01/Redis-docker%E6%9B%B4%E6%96%B0%E5%90%8E%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/"/>
+    <id>http://iris.distars.top/2024/07/01/Redis-docker%E6%9B%B4%E6%96%B0%E5%90%8E%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</id>
+    <published>2024-07-01T10:00:50.000Z</published>
+    <updated>2024-07-05T02:33:03.855Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天手贱不小心把Redis给更新了，结果就启动不了了。日志报错如下：</p><blockquote><ul><li>1:M 01 Jul 2024 03:45:35.977 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add ‘vm.overcommit_memory = 1’ to /etc/sysctl.conf and then reboot or run the command ‘sysctl vm.overcommit_memory=1’ for this to take effect.</li><li>1:M 01 Jul 2024 03:46:36.263 # Fatal error loading the DB: Invalid argument. Exiting.</li><li>1:M 01 Jul 2024 03:46:36.263 # Can’t handle RDB format version 11</li><li>1:M 01 Jul 2024 03:46:36.262 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add ‘vm.overcommit_memory = 1’ to /etc/sysctl.conf and then reboot or run the command ‘sysctl vm.overcommit_memory=1’ for this to take effect.</li><li>1:M 01 Jul 2024 03:46:36.262 # Server initialized</li><li>1:M 01 Jul 2024 03:46:36.262 * Running mode=standalone, port=6379.</li><li>1:M 01 Jul 2024 03:46:36.262 * monotonic clock: POSIX clock_gettime</li><li>1:C 01 Jul 2024 03:46:36.261 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf</li></ul></blockquote><p>根据日志，Redis出现两个问题导致其无法启动：</p><p>1.<code>vm.overcommit_memory</code>参数没有设置为1，需要修改内核参数来解决；<br>2.<code>Fatal error loading the DB: Invalid argument. Exiting</code> 和 <code>Can't handle RDB format version 11</code> 问题，这个错误是因为当前的Redis版本无法处理已有的数据文件（RDB文件）。因为更新Redis版本之后不支持旧版本的数据文件格式。<br />解决办法如下：</p><div class="story post-story"><h2 id="一-修改overcommit_memory参数"><a class="markdownIt-Anchor" href="#一-修改overcommit_memory参数"></a> 一、修改<code>overcommit_memory</code>参数</h2><p>因为这时Redis已经无法启动，因而首先需要强行停止Redis容器<code>your_redis_container</code>需要替换为你的容器名称</p><pre><code>docker stop your_redis_container</code></pre><p><strong>1.临时修改<code>vm.overcommit_memory</code>参数，使其立即生效</strong></p><pre><code>sysctl vm.overcommit_memory=1</code></pre><p><strong>2.永久修改<code>/etc/sysctl.conf</code>，使用echo命令将配置追加到/etc/sysctl.conf文件中：</strong></p><pre><code>echo 'vm.overcommit_memory = 1' &gt;&gt; /etc/sysctl.conf</code></pre><p><strong>3.使配置生效：</strong></p><pre><code>sysctl -p</code></pre><p>如果在容器中没有权限修改这些文件，也可以进入宿主机来修改。</p><p>在宿主机上打开终端。</p><p><strong>1.临时修改<code>vm.overcommit_memory</code>参数：</strong></p><pre><code>sudo sysctl vm.overcommit_memory=1</code></pre><p><strong>2.永久修改<code>/etc/sysctl.conf</code>文件：</strong></p><pre><code>echo 'vm.overcommit_memory = 1' | sudo tee -a /etc/sysctl.conf</code></pre><p><strong>3.使配置生效：</strong></p><pre><code>sudo sysctl -p</code></pre><p><strong>4.重启Redis</strong></p><pre><code>docker restart your_redis_container</code></pre></div><div class="story post-story"><h2 id="二-备份并重新生成rdb文件"><a class="markdownIt-Anchor" href="#二-备份并重新生成rdb文件"></a> 二、备份并重新生成RDB文件</h2><p><strong>1.强制停止容器</strong></p><p>首先，确保容器停止：</p><pre><code>docker stop your_redis_container</code></pre><p><strong>2.启动一个临时的容器</strong></p><p>启动一个临时容器来备份并删除RDB文件：</p><pre><code>docker run --rm -it -v /path/to/redis/data:/data busybox sh</code></pre><p><em><strong><font color="#c00000">注意：</font>将<code>/path/to/redis/data</code>替换为你Redis数据目录的实际路径。</strong></em></p><p><strong>3.备份并删除RDB文件</strong></p><p>在临时容器内执行以下命令：</p><p>备份现有的RDB文件：</p><pre><code>cp /data/dump.rdb /data/dump.rdb.bak</code></pre><p>删除现有的RDB文件：</p><pre><code>rm /data/dump.rdb</code></pre><p>退出临时容器：</p><pre><code>exit</code></pre><p><strong>4.重启Redis容器</strong></p><p>重新启动Redis容器：</p><pre><code>docker start your_redis_container</code></pre><p><strong>5.验证Redis容器状态</strong></p><p>检查Redis容器日志以确保它正确启动：</p><pre><code>docker logs your_redis_container</code></pre><p>如果Redis正常启动，且日志不再报错就没有什么问题了。<br>像MySQL和redis这种重要的数据库应用，尽量不要随便升级，很容易会出现各种兼容性问题。</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天手贱不小心把Redis给更新了，结果就启动不了了。日志报错如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;1:M 01 Jul 2024 03:45:35.977 # WARNING overcommit_memory is set to 0! Backgr</summary>
+      
+    
+    
+    
+    <category term="nas" scheme="http://iris.distars.top/categories/nas/"/>
+    
+    <category term="日常" scheme="http://iris.distars.top/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+    <category term="nas折腾日常" scheme="http://iris.distars.top/tags/nas%E6%8A%98%E8%85%BE%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
