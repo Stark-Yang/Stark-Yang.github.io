@@ -29,8 +29,8 @@
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/favicon16.ico">
   <link rel="preload" href="/css/style.css" as="style">
-  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Iris" type="application/atom+xml">
@@ -66,7 +66,7 @@
   --color-card: #fff;
   --color-text: #444;
   --color-block: #f6f6f6;
-  --color-inlinecode: #a7a8bd;
+  --color-inlinecode: #8b008b;
   --color-codeblock: #fff7ea;
   --color-h1: #3a3a3a;
   --color-h2: #3a3a3a;
@@ -110,7 +110,7 @@ html {
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   font-size: 16px;
 }
 html >::-webkit-scrollbar {
@@ -424,7 +424,7 @@ button {
   margin-top: 32px;
 }
 .cover-wrapper .cover-body .title {
-  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", "文鼎签字笔体G30_D", DHelvetica, Arial, Helvetica, monospace;
   font-size: 3.125rem;
   line-height: 1.2;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -692,7 +692,7 @@ button {
     --color-mode: 'dark';
   }
   :root:not([color-scheme]) {
-    --color-site-body: #121212;
+    --color-site-body: #222;
     --color-read-bkg: #1f1f1f;
     --color-read-post: #262626;
     --color-site-bg: #1f1f1f;
@@ -709,7 +709,7 @@ button {
     --color-h4: rgba(255,255,255,0.6);
     --color-h5: rgba(255,255,255,0.6);
     --color-h6: rgba(255,255,255,0.6);
-    --color-p: rgba(217,217,217,0.871);
+    --color-p: #ddd;
     --color-list: rgba(217,217,217,0.871);
     --color-list-hl: #cee6c7;
     --color-meta: rgba(191,191,191,0.871);
@@ -764,7 +764,7 @@ button {
   }
 }
 [color-scheme='dark'] {
-  --color-site-body: #121212;
+  --color-site-body: #222;
   --color-read-bkg: #1f1f1f;
   --color-read-post: #262626;
   --color-site-bg: #1f1f1f;
@@ -781,7 +781,7 @@ button {
   --color-h4: rgba(255,255,255,0.6);
   --color-h5: rgba(255,255,255,0.6);
   --color-h6: rgba(255,255,255,0.6);
-  --color-p: rgba(217,217,217,0.871);
+  --color-p: #ddd;
   --color-list: rgba(217,217,217,0.871);
   --color-list-hl: #cee6c7;
   --color-meta: rgba(191,191,191,0.871);
@@ -840,15 +840,15 @@ button {
   }
 }
 @font-face {
-  font-family: 'Dosis';
-  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
+  font-family: 'UbuntuMono';
+  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
-  font-family: 'Dosis';
-  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
+  font-family: 'Varela Round';
+  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -971,7 +971,7 @@ button {
   line-height: 64px;
   padding: 0 24px;
   font-size: 1.25rem;
-  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", "文鼎签字笔体G30_D", DHelvetica, Arial, Helvetica, monospace;
 }
 .l_header #wrapper .nav-main .title img {
   height: 64px;
@@ -982,7 +982,7 @@ button {
 }
 .l_header .nav-sub .title {
   font-weight: bold;
-  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   line-height: 1.2;
   max-height: 64px;
   white-space: normal;
@@ -2122,7 +2122,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1720059494282),
+    lastupdate: new Date(1720145986526),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2130,7 +2130,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
     },
     sidebar: {
-      for_page: ["blogger","post","category","tagcloud","guide"],
+      for_page: ["blogger","qrcode","post","category","tagcloud","guide"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -2147,7 +2147,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
       aplayer: {
-        id: 3175833810,
+        id: 889321062,
         enable:true
       },
       
@@ -2184,7 +2184,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2368,7 +2368,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         list-max-height='320px'
         server='netease'
         type='playlist'
-        id='3175833810'
+        id='889321062'
         list-folded='true'>
       </meting-js>
     
@@ -2566,85 +2566,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div id="l_body">
       <div id="l_cover">
   
-    
-      <div class="cover-wrapper  search" id='half'>
-        
-  <div id="parallax-window"></div>
-
-<div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title"><font><span>南</span> <span>烛</span> <span>子<span></font></p>
-    
-    
-      <p class="subtitle">一 株 南 烛 独 如 丹</p>
-    
-  </div>
-  <div class='bottom'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="search..." />
-          <i class="icon fa-solid fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <p>首页</p>
-            </a>
-          
-            <a href="/categories/"
-              
-              
-              active-action="action-categories">
-              <p>分类</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <p>标签</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <p>归档</p>
-            </a>
-          
-            <a href="/friends/"
-              
-              
-              active-action="action-friends">
-              <p>导航</p>
-            </a>
-          
-            <a href="/about/"
-              
-              
-              active-action="action-about">
-              <p>关于</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-  
 </div>
 
       <div id="safearea">
@@ -2763,6 +2684,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
       </div>
+    
+  </div>
+</section>
+
+    
+  
+
+  
+    
+    
+      
+<section class="widget qrcode desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/qrcode/github@volantis.png'
+      
+        height='64px'
+      />
+    
+      <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/qrcode/github@volantis.png'
+      
+        height='64px'
+      />
     
   </div>
 </section>
@@ -2975,7 +2921,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         list-max-height='320px'
         server='netease'
         type='playlist'
-        id='3175833810'
+        id='889321062'
         list-folded='true'>
       </meting-js>
     
@@ -3076,7 +3022,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <div class='copyright'>
-        <p><a href="http://iris.distars.top">Copyright © since 2023 IRIS</a></p>
+        <p>Copyright © since 2023- [current_year]<a href="http://iris.distars.top">IRIS</a></p>
 
         </div>
       
@@ -3115,6 +3061,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 <!-- required -->
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
 
 <!-- internal -->
@@ -3362,7 +3312,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
               Metings.forEach((item, index) => {
                 const aplayerItem = item.aplayer; if(!aplayerItem) return;
                 const rightAplayerCheck = 'true' === 'true'
-                  && item.meta.id === '3175833810';
+                  && item.meta.id === '889321062';
                 if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
                 if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
                   aplayerItem.on('play', function messagePlay() {
@@ -3491,18 +3441,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  <script>
+  
+  
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
 
 
-  function p_highlightjs_copyCode(){
-    if (!(document.querySelector(".highlight .code pre") ||
-      document.querySelector(".article pre code"))) {
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function p_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
       return;
     }
-    VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
   }
-  volantis.requestAnimationFrame(p_highlightjs_copyCode)
+  volantis.requestAnimationFrame(p_prismjs_copyCode)
 
 </script>
 
@@ -3514,7 +3490,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   <script>
-  let imgs = ["https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background202309142015350.jpg","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/005.webp","https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background202309142014506.jpg","https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background202309142015779.jpg","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background202309142015350.jpg","https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background%E7%A7%8B%E5%A4%A9%20%E4%B8%B0%E6%94%B6%20%E7%B2%AE%E9%A3%9F%20%E9%B8%9F%E5%84%BF%204K%E5%A3%81%E7%BA%B8_%E5%BD%BC%E5%B2%B8%E5%9B%BE%E7%BD%91.jpg"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background202309142015350.jpg","https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background202309142014506.jpg","https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background202309142015350.jpg","https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background%E7%A7%8B%E5%A4%A9%20%E4%B8%B0%E6%94%B6%20%E7%B2%AE%E9%A3%9F%20%E9%B8%9F%E5%84%BF%204K%E5%A3%81%E7%BA%B8_%E5%BD%BC%E5%B2%B8%E5%9B%BE%E7%BD%91.jpg","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/005.webp","https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/background202309142015779.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3522,14 +3498,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let ParallaxWindow = document.querySelector("#parallax-window");
     
     Parallax.window = ParallaxWindow;
-    Parallax.options.fade = 800;
+    Parallax.options.fade = 100;
     Parallax.cache = 1;
     next_parallax();
     Parallax.init();
     if (imgs.length>1) {
       IntervalParallax = setInterval(function () {
         next_parallax();
-      }, '35000');
+      }, '350000');
     }
   }
 
@@ -3838,7 +3814,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","sameAs":["https://github.com/volantis-x"],"description":"A personal site"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://iris.distars.top/","name":"Iris"}},{"@type":"ListItem","position":2,"item":{"@id":"http://iris.distars.top/archives/","name":"Archive"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Iris","url":"http://iris.distars.top/","keywords":null,"description":"A personal site","author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","description":"A personal site"},"publisher":{"@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://iris.distars.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"A personal site","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/"},"publisher":{"@type":"Organization","name":"Iris","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","sameAs":["https://github.com/Stark-Yang"],"description":"A personal site"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://iris.distars.top/","name":"Iris"}},{"@type":"ListItem","position":2,"item":{"@id":"http://iris.distars.top/archives/","name":"Archive"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Iris","url":"http://iris.distars.top/","keywords":null,"description":"A personal site","author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","description":"A personal site"},"publisher":{"@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://iris.distars.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"A personal site","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/"},"publisher":{"@type":"Organization","name":"Iris","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}}]</script>
 
 
 
