@@ -58,7 +58,7 @@ var binft = function (r) {
   function n(r) {
       for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
           var oneword = document.createElement("span");
-          oneword.textContent = "_"; // 此处是末尾字符,如果想用光标样式可以改为"|"
+          oneword.textContent = "|"; // 此处是末尾字符,如果想用光标样式可以改为"|"
           oneword.style.color = getRandomColor();
           n.appendChild(oneword);
       }
