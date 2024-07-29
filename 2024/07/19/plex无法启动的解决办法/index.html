@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://iris.distars.top/categories/nas/"/>
+  
+  <link rel="canonical" href="http://iris.distars.top/2024/07/19/plex无法启动的解决办法/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -35,18 +35,22 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Iris" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>分类：nas - Iris</title>
-  <meta name="keywords" content="null">
+  <title>plex docker无法启动的解决办法 - Iris</title>
+  <meta name="keywords" content="nas,日常,null">
   <meta desc name="description" content="A personal site - Stark-Yang - Iris">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Iris">
-<meta property="og:url" content="http://iris.distars.top/categories/nas/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="plex docker无法启动的解决办法">
+<meta property="og:url" content="http://iris.distars.top/2024/07/19/plex%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/index.html">
 <meta property="og:site_name" content="Iris">
-<meta property="og:description" content="A personal site">
+<meta property="og:description" content="前一阵刚解决了redis无法启动的问题，结果访问自己的plex想看个电影的时候发现plex也无法启动，唉，开整。 日志报错如下  -Error: Unable to set up server: sqlite3_statement_backend::prepare: no such table: synced_metadata_items for SQL: select max(max(synce">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-07-19T03:41:06.000Z">
+<meta property="article:modified_time" content="2024-07-20T08:05:59.612Z">
 <meta property="article:author" content="Stark-Yang">
+<meta property="article:tag" content="nas">
+<meta property="article:tag" content="日常">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2115,7 +2119,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2572,25 +2576,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://iris.distars.top/2024/07/01/Redis-docker更新后无法启动/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://iris.distars.top/2024/07/19/plex无法启动的解决办法/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Iris">
   </span>
@@ -2599,73 +2587,281 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="A personal site">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/07/01/Redis-docker%E6%9B%B4%E6%96%B0%E5%90%8E%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/"  itemprop="url">
-        Redis docker更新后无法启动
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        今天手贱不小心把Redis给更新了，结果就启动不了了。日志报错如下：
+    
+      <h1 class="title" itemprop="name headline">
+        plex docker无法启动的解决办法
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' target="_blank" href="https://github.com/Stark-Yang/" rel="nofollow noopener">
+    <img itemprop="image" src="https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Stark-Yang</p>
+  </a>
+</div>
+
+          
+        
+          
+            
 
 
-1:M 01 Jul 2024 03:45:35.977 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add ‘vm.overcommit_...
-      
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-07-19T11:41:06+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2024年7月19日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/nas/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>nas</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%97%A5%E5%B8%B8/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>日常</p></a></div>
+  <span hidden itemprop="keywords">nas 日常</span>
+  
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：565 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：2 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>前一阵刚解决了redis无法启动的问题，结果访问自己的plex想看个电影的时候发现plex也无法启动，唉，开整。</p>
+<p>日志报错如下</p>
+<blockquote>
+<p>-Error: Unable to set up server: sqlite3_statement_backend::prepare: no such table: synced_metadata_items for SQL: select max(max(synced_metadata_items.changed_at),max(synced_metadata_items.first_packaged_at)) from synced_metadata_items (N4soci10soci_errorE)</p>
+</blockquote>
+<p>这是Plex服务器在启动时无法找到或访问SQLite数据库中的某个表(synced_metadata_items)产生的问题，是一个常见的数据库损坏或丢失表的问题。</p>
+<p><strong>注意！以下操作会清除所有已经刮削好的数据，请谨慎操作！</strong></p>
+<h3 id="1在宿主机上进入plex容器"><a class="markdownIt-Anchor" href="#1在宿主机上进入plex容器"></a> 1.在宿主机上进入Plex容器：</h3>
+<pre><code>docker exec -it your_plex_container /bin/bash
+</code></pre>
+<p><em><strong><font color="#c00000">注意：</font> <code>your_plex_container</code>需要替换为你的容器名称</strong></em></p>
+<h3 id="2查找数据库文件"><a class="markdownIt-Anchor" href="#2查找数据库文件"></a> 2.查找数据库文件：</h3>
+<p>在容器内运行以下命令查找数据库文件的实际位置：</p>
+<pre><code>find / -name &quot;com.plexapp.plugins.library.db&quot;
+</code></pre>
+<p><em><strong>通常，Plex 的实际运行数据存储在 /config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/ 目录下</strong></em></p>
+<h3 id="3创建备份目录"><a class="markdownIt-Anchor" href="#3创建备份目录"></a> 3.创建备份目录：</h3>
+<p>在容器内运行以下命令：</p>
+<pre><code>mkdir -p /tmp/backup
+</code></pre>
+<h3 id="4备份数据库文件"><a class="markdownIt-Anchor" href="#4备份数据库文件"></a> 4.备份数据库文件：</h3>
+<pre><code>cp &quot;/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db&quot; /tmp/backup/
+</code></pre>
+<h3 id="5安装-sqlite3-工具"><a class="markdownIt-Anchor" href="#5安装-sqlite3-工具"></a> 5.安装 sqlite3 工具：</h3>
+<p>在容器内安装 sqlite3。基于容器的操作系统选择适当的包管理器。</p>
+<h4 id="51-如果你的docker容器基于debian或ubuntu使用-apt"><a class="markdownIt-Anchor" href="#51-如果你的docker容器基于debian或ubuntu使用-apt"></a> 5.1 如果你的docker容器基于Debian或Ubuntu，使用 apt：</h4>
+<pre><code>apt-get update
+apt-get install -y sqlite3
+</code></pre>
+<h4 id="52-如果你的docker容器基于alpine使用-apk"><a class="markdownIt-Anchor" href="#52-如果你的docker容器基于alpine使用-apk"></a> 5.2 如果你的docker容器基于Alpine，使用 apk：</h4>
+<pre><code>apk update
+apk add sqlite
+</code></pre>
+<h3 id="6修复数据库"><a class="markdownIt-Anchor" href="#6修复数据库"></a> 6.修复数据库：</h3>
+<pre><code>sqlite3 &quot;/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db&quot; &quot;PRAGMA integrity_check;&quot;
+</code></pre>
+<p>如果报错，尝试修复：</p>
+<pre><code>sqlite3 &quot;/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db&quot; &quot;REINDEX;&quot;
+</code></pre>
+<h3 id="7重命名损坏的数据库文件"><a class="markdownIt-Anchor" href="#7重命名损坏的数据库文件"></a> 7.重命名损坏的数据库文件：</h3>
+<p>如果数据库文件严重损坏且无法修复，可以重命名或删除，然后重新启动Plex容器，让它重新生成数据库文件。</p>
+<pre><code>mv &quot;/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db&quot; &quot;/tmp/backup/com.plexapp.plugins.library.db.bak&quot;
+</code></pre>
+<h3 id="8退出容器并重启plex容器"><a class="markdownIt-Anchor" href="#8退出容器并重启plex容器"></a> 8.退出容器并重启Plex容器：</h3>
+<pre><code>exit
+docker restart your_Plex_container
+</code></pre>
+<p>然后plex就可以正常运行了，不过里面刮削的数据已经都没了，没办法重新导入影视目录重新刮削吧。</p>
+
+
+  </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-07-01T18:00:50+08:00">2024-07-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/nas/">nas</a><span class="sep"></span><a class="category-link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/nas/" itemprop="url"><span itemprop="name">nas</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%97%A5%E5%B8%B8/" itemprop="url"><span itemprop="name">日常</span></a>
-            </span>
-          
-        
-      </div>
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2024/07/01/Redis-docker%E6%9B%B4%E6%96%B0%E5%90%8E%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fa-solid fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2024\07\01\Redis-docker更新后无法启动\" title="Redis docker更新后无法启动" rel="bookmark "><span class="title">Redis docker更新后无法启动</span></a></div></section></div>
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-20T16:05:59+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2024年7月20日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/nas/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>nas</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%97%A5%E5%B8%B8/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>日常</p></a></div>
+  <span hidden itemprop="keywords">nas 日常</span>
   
 
 
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://iris.distars.top/2024/07/19/plex%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/&title=plex docker无法启动的解决办法 - Iris&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://iris.distars.top/2024/07/19/plex%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/&title=plex docker无法启动的解决办法 - Iris&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://iris.distars.top/2024/07/19/plex%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/&title=plex docker无法启动的解决办法 - Iris&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/07/04/hello-world/'>
+          <p class='title'>Hello World<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2674,254 +2870,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile ">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>南烛子</h2>
-        
-        
-        
-     
-        
-          <p><span><div id="binft"></div></p>
-      
-  
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://drive.distars.top"
-              class="social fa-cloud flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Stark-Yang"
-              class="social fa-brands fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/friends/"
-              class="social fa-chrome flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget qrcode desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/qrcode/github@volantis.png'
-      
-        height='200px'
-      />
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/nas/" href="/categories/nas/"
-            active-action="action-categoriesnas"
-            ><div class='name'>nas</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%97%A5%E5%B8%B8/" href="/categories/%E6%97%A5%E5%B8%B8/"
-            active-action="action-categoriesE697A5E5B8B8"
-            ><div class='name'>日常</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/nas/" style="font-size: 14px; color: #999">nas</a> <a href="/tags/nas%E6%8A%98%E8%85%BE%E6%97%A5%E5%B8%B8/" style="font-size: 14px; color: #999">nas折腾日常</a> <a href="/tags/%E3%80%8AC-Primer-Plus%E3%80%8B/" style="font-size: 14px; color: #999">《C Primer Plus》</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 14px; color: #999">日常</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget grid desktop mobile">
-  
-  <header>
-    
-      <i class="fa-solid fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>分类导航</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="grid navigation fixed">
-      
-        <a class="flat-box" href="/faqs/"
-          
-          
-          active-action="action-faqs">
-          
-            <i class="fa-solid fa-question-circle fa-fw" aria-hidden="true"></i>
-          
-          常见问题
-        </a>
-      
-        <a class="flat-box" href="/examples/"
-          
-          
-          active-action="action-examples">
-          
-            <i class="fa-solid fa-play-circle fa-fw" aria-hidden="true"></i>
-          
-          示例博客
-        </a>
-      
-        <a class="flat-box" href="/contributors/"
-          
-          
-          active-action="action-contributors">
-          
-            <i class="fa-solid fa-handshake fa-fw" aria-hidden="true"></i>
-          
-          特别感谢
-        </a>
-      
-        <a class="flat-box" href="/archives/"
-          
-          
-          active-action="action-archives">
-          
-            <i class="fa-solid fa-file-alt fa-fw" aria-hidden="true"></i>
-          
-          测试博文
-        </a>
-      
-        <a class="flat-box" href="https://github.com/volantis-x/hexo-theme-volantis/"
-          
-            rel="external nofollow noopener noreferrer"
-          
-          
-            target="_blank"
-          
-          active-action="action-https:githubcomvolantis-xhexo-theme-volantis">
-          
-            <i class="fa-solid fa-file-code fa-fw" aria-hidden="true"></i>
-          
-          主题源码
-        </a>
-      
-        <a class="flat-box" href="https://github.com/volantis-x/hexo-theme-volantis/releases/"
-          
-            rel="external nofollow noopener noreferrer"
-          
-          
-            target="_blank"
-          
-          active-action="action-https:githubcomvolantis-xhexo-theme-volantisreleases">
-          
-            <i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i>
-          
-          更新日志
-        </a>
-      
-    </div>
-  </div>
-</section>
-
     
   
 
@@ -2930,20 +2878,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-<section class="widget text desktop mobile">
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
   
   <header>
     
-      <i class="fa-solid fa-plus fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
   <div class='content'>
-    
-      <p><strong>标题</strong><br>内容「<a href="/Notice/#%E5%86%85%E5%AE%B9"><strong>功能</strong></a>」。</p>
-
-    
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E5%9C%A8%E5%AE%BF%E4%B8%BB%E6%9C%BA%E4%B8%8A%E8%BF%9B%E5%85%A5plex%E5%AE%B9%E5%99%A8"><span class="toc-text"> 1.在宿主机上进入Plex容器：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E6%9F%A5%E6%89%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6"><span class="toc-text"> 2.查找数据库文件：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E5%88%9B%E5%BB%BA%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95"><span class="toc-text"> 3.创建备份目录：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6"><span class="toc-text"> 4.备份数据库文件：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E5%AE%89%E8%A3%85-sqlite3-%E5%B7%A5%E5%85%B7"><span class="toc-text"> 5.安装 sqlite3 工具：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#51-%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%9F%BA%E4%BA%8Edebian%E6%88%96ubuntu%E4%BD%BF%E7%94%A8-apt"><span class="toc-text"> 5.1 如果你的docker容器基于Debian或Ubuntu，使用 apt：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#52-%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%9F%BA%E4%BA%8Ealpine%E4%BD%BF%E7%94%A8-apk"><span class="toc-text"> 5.2 如果你的docker容器基于Alpine，使用 apk：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E4%BF%AE%E5%A4%8D%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text"> 6.修复数据库：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E9%87%8D%E5%91%BD%E5%90%8D%E6%8D%9F%E5%9D%8F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6"><span class="toc-text"> 7.重命名损坏的数据库文件：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E9%80%80%E5%87%BA%E5%AE%B9%E5%99%A8%E5%B9%B6%E9%87%8D%E5%90%AFplex%E5%AE%B9%E5%99%A8"><span class="toc-text"> 8.退出容器并重启Plex容器：</span></a></li></ol>
   </div>
 </section>
 
@@ -2955,6 +2902,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
         </div>
@@ -3872,7 +3820,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","sameAs":["https://github.com/Stark-Yang"],"description":"A personal site"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://iris.distars.top/","name":"Iris"}},{"@type":"ListItem","position":2,"item":{"@id":"http://iris.distars.top/categories/nas/","name":"nas"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Iris","url":"http://iris.distars.top/","keywords":null,"description":"A personal site","author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","description":"A personal site"},"publisher":{"@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://iris.distars.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"A personal site","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/"},"publisher":{"@type":"Organization","name":"Iris","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","sameAs":["https://github.com/Stark-Yang"],"description":"A personal site"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://iris.distars.top/","name":"Iris"}},{"@type":"ListItem","position":3,"item":{"@id":"http://iris.distars.top/2024/07/19/plex无法启动的解决办法/","name":"plex docker无法启动的解决办法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Iris","url":"http://iris.distars.top/","keywords":null,"description":"A personal site","author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/","description":"A personal site"},"publisher":{"@type":"Organization","name":"Iris","url":"http://iris.distars.top/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://iris.distars.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"plex docker无法启动的解决办法","description":"A personal site","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://iris.distars.top/2024/07/19/plex%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"},"author":{"@type":"Person","name":"Stark-Yang","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png"},"url":"http://iris.distars.top/"},"publisher":{"@type":"Organization","name":"Iris","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}},"url":"http://iris.distars.top/2024/07/19/plex%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/","wordCount":0,"datePublished":"2024-07-19T03:41:06.000Z","dateModified":"2024-07-20T08:05:59.612Z","keywords":"nas,日常","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/Stark-Yang/image-source/pic/blog/202309120013963.png","width":192,"height":192}}]</script>
 
 
 

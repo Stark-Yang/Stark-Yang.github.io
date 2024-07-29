@@ -6,7 +6,7 @@
   <link href="http://iris.distars.top/atom.xml" rel="self"/>
   
   <link href="http://iris.distars.top/"/>
-  <updated>2023-08-31T06:55:13.000Z</updated>
+  <updated>2024-07-20T08:05:59.612Z</updated>
   <id>http://iris.distars.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>plex docker无法启动的解决办法</title>
+    <link href="http://iris.distars.top/2024/07/19/plex%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>http://iris.distars.top/2024/07/19/plex%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</id>
+    <published>2024-07-19T03:41:06.000Z</published>
+    <updated>2024-07-20T08:05:59.612Z</updated>
+    
+    <content type="html"><![CDATA[<p>前一阵刚解决了redis无法启动的问题，结果访问自己的plex想看个电影的时候发现plex也无法启动，唉，开整。</p><p>日志报错如下</p><blockquote><p>-Error: Unable to set up server: sqlite3_statement_backend::prepare: no such table: synced_metadata_items for SQL: select max(max(synced_metadata_items.changed_at),max(synced_metadata_items.first_packaged_at)) from synced_metadata_items (N4soci10soci_errorE)</p></blockquote><p>这是Plex服务器在启动时无法找到或访问SQLite数据库中的某个表(synced_metadata_items)产生的问题，是一个常见的数据库损坏或丢失表的问题。</p><p><strong>注意！以下操作会清除所有已经刮削好的数据，请谨慎操作！</strong></p><h3 id="1在宿主机上进入plex容器"><a class="markdownIt-Anchor" href="#1在宿主机上进入plex容器"></a> 1.在宿主机上进入Plex容器：</h3><pre><code>docker exec -it your_plex_container /bin/bash</code></pre><p><em><strong><font color="#c00000">注意：</font> <code>your_plex_container</code>需要替换为你的容器名称</strong></em></p><h3 id="2查找数据库文件"><a class="markdownIt-Anchor" href="#2查找数据库文件"></a> 2.查找数据库文件：</h3><p>在容器内运行以下命令查找数据库文件的实际位置：</p><pre><code>find / -name &quot;com.plexapp.plugins.library.db&quot;</code></pre><p><em><strong>通常，Plex 的实际运行数据存储在 /config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/ 目录下</strong></em></p><h3 id="3创建备份目录"><a class="markdownIt-Anchor" href="#3创建备份目录"></a> 3.创建备份目录：</h3><p>在容器内运行以下命令：</p><pre><code>mkdir -p /tmp/backup</code></pre><h3 id="4备份数据库文件"><a class="markdownIt-Anchor" href="#4备份数据库文件"></a> 4.备份数据库文件：</h3><pre><code>cp &quot;/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db&quot; /tmp/backup/</code></pre><h3 id="5安装-sqlite3-工具"><a class="markdownIt-Anchor" href="#5安装-sqlite3-工具"></a> 5.安装 sqlite3 工具：</h3><p>在容器内安装 sqlite3。基于容器的操作系统选择适当的包管理器。</p><h4 id="51-如果你的docker容器基于debian或ubuntu使用-apt"><a class="markdownIt-Anchor" href="#51-如果你的docker容器基于debian或ubuntu使用-apt"></a> 5.1 如果你的docker容器基于Debian或Ubuntu，使用 apt：</h4><pre><code>apt-get updateapt-get install -y sqlite3</code></pre><h4 id="52-如果你的docker容器基于alpine使用-apk"><a class="markdownIt-Anchor" href="#52-如果你的docker容器基于alpine使用-apk"></a> 5.2 如果你的docker容器基于Alpine，使用 apk：</h4><pre><code>apk updateapk add sqlite</code></pre><h3 id="6修复数据库"><a class="markdownIt-Anchor" href="#6修复数据库"></a> 6.修复数据库：</h3><pre><code>sqlite3 &quot;/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db&quot; &quot;PRAGMA integrity_check;&quot;</code></pre><p>如果报错，尝试修复：</p><pre><code>sqlite3 &quot;/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db&quot; &quot;REINDEX;&quot;</code></pre><h3 id="7重命名损坏的数据库文件"><a class="markdownIt-Anchor" href="#7重命名损坏的数据库文件"></a> 7.重命名损坏的数据库文件：</h3><p>如果数据库文件严重损坏且无法修复，可以重命名或删除，然后重新启动Plex容器，让它重新生成数据库文件。</p><pre><code>mv &quot;/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db&quot; &quot;/tmp/backup/com.plexapp.plugins.library.db.bak&quot;</code></pre><h3 id="8退出容器并重启plex容器"><a class="markdownIt-Anchor" href="#8退出容器并重启plex容器"></a> 8.退出容器并重启Plex容器：</h3><pre><code>exitdocker restart your_Plex_container</code></pre><p>然后plex就可以正常运行了，不过里面刮削的数据已经都没了，没办法重新导入影视目录重新刮削吧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;前一阵刚解决了redis无法启动的问题，结果访问自己的plex想看个电影的时候发现plex也无法启动，唉，开整。&lt;/p&gt;
+&lt;p&gt;日志报错如下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;-Error: Unable to set up server: sqlite3_state</summary>
+      
+    
+    
+    
+    
+    <category term="nas" scheme="http://iris.distars.top/tags/nas/"/>
+    
+    <category term="日常" scheme="http://iris.distars.top/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
